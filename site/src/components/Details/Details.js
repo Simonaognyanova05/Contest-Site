@@ -18,22 +18,6 @@ export default function Details() {
             <a href="#" class="project-link">🔗 Виж проекта на живо</a>
 
             <button class="likes-btn">❤️ Харесай</button>
-
-            <div class="comments">
-                <h2>Коментари</h2>
-
-                <form class="comment-form" style={{ marginBottom: "2rem" }}>
-                    <textarea placeholder="Вашият коментар..." required
-                        style={{ width: "100%", padding: "1rem", borderRadius: "var(--radius)", border: "1px solid var(--glass-border)", background: "rgba(255,255,255,0.1)", color: "white", backdropFilter: "blur(12px)", fontSize: "1rem", minHeight: "120px", resize: "vertical" }}></textarea>
-                    <button type="submit"
-                        style={{ marginTop: "1rem", background: "linear-gradient(135deg, var(--primary), var(--primary2))", padding: "0.8rem 1.4rem", border: "none", borderRadius: "var(--radius)", color: "white", fontSize: "1rem", cursor: "pointer", boxShadow: "0 8px 25px rgba(0,0,0,0.4)", transition: "0.3s" }}>💬
-                        Публикувай</button>
-                </form>
-
-                <div class="comment">Невероятна визия! 👏</div>
-                <div class="comment">Много футуристично усещане!</div>
-            </div>
-            <div class="comment">Много футуристично усещане!</div>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import {Link} from 'react-router-dom';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,8 +15,9 @@ export default function Header() {
                 </button>
 
                 <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-                    <a href="index.html">Начало</a>
-                    <a href="submit.html">Качи проект</a>
+                    <Link to='/'>Начало</Link>
+                    <Link to='/projects'>Проекти</Link>
+                    <Link to='/submit'>Качи проект</Link>
                 </div>
             </nav>
         </header>
