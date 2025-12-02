@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +9,6 @@ export default function Header() {
             <nav>
                 <h2 style={{ fontWeight: "700", fontSize: "1.6rem" }}>⚡ Конкурси</h2>
 
-                {/* Hamburger button for mobile */}
                 <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
                     ☰
                 </button>
@@ -18,6 +17,7 @@ export default function Header() {
                     <Link to='/'>Начало</Link>
                     <Link to='/projects'>Проекти</Link>
                     <Link to='/submit'>Качи проект</Link>
+                    <Link to='/register'>Регистрация</Link>
                 </div>
             </nav>
         </header>

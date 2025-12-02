@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Home() {
     return (
         <>
@@ -30,7 +32,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <a className="view-projects-btn" href="projects.html">📂 Разгледай всички проекти</a>
+                <Link className="view-projects-btn" to="/projects">📂 Разгледай всички проекти</Link>
             </div>
         </>
     );
