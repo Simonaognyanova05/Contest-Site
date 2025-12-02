@@ -2,22 +2,30 @@ import './Details.css';
 
 export default function Details() {
     return (
-        <div class="container">
+        <div className="container">
             <h1 style={{ marginBottom: "1rem" }}>⚡ Проект – Futuristic Design</h1>
 
-            <div class="img-box">
-                <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb" />
+            {/* --- НОВА СЕКЦИЯ: ИНФОРМАЦИЯ ЗА АВТОРА --- */}
+            <div className="author-info">
+                <h3>Информация за автора</h3>
+                <p><strong>Участник:</strong> Иван Петров</p>
+                <p><strong>Имейл:</strong>ivan.petrov@example.com</p>
+                {/* Линкът към проекта на живо е по-долу, но може да добавим и друг тук */}
+                <p><strong>Линк към проекта:</strong> <a href="https://github.com/ivanpetrov/futuristic-design" target="_blank" rel="noopener noreferrer" className="inline-link">Виж проекта</a></p>
             </div>
+            {/* ------------------------------------------- */}
 
-            <div class="description">
+            <div className="img-box">
+                <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb" alt="Изображение на проекта" />
+            </div>
+            <div className="description">
                 Това е подробното описание на проекта. Тук авторът може да обясни идеята, процеса на работа, използваните
                 технологии и вдъхновението зад дизайна. Целта е потребителите да разберат повече за проекта и да оценят
                 усилията зад него.
-
             </div>
-            <a href="#" class="project-link">🔗 Виж проекта на живо</a>
+            <a href="#" className="project-link">🔗 Виж проекта на живо</a>
 
-            <button class="likes-btn">❤️ Харесай</button>
+            <button className="likes-btn">❤️ Харесай</button>
         </div>
     );
 }
