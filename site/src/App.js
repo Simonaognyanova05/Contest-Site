@@ -8,24 +8,24 @@ import Details from './components/Details/Details';
 import Submit from './components/Submit';
 import Register from './components/Register';
 import { AuthProvider } from './contexts/AuthContext';
+import Login from './components/Login';
 
 function App() {
 
   return (
-    <AuthProvider>
-      <div className="App">
-        <Header />
-        <Routes basename="/">
-          <Route path='/' element={<Home />} />
-          <Route path='/projects' element={<Projects />} />
-          <Route path='/details' element={<Details />} />
-          <Route path='/submit' element={<Submit />} />
-          <Route path='/register' element={<Register />} />
-        </Routes>
+    <div className="App">
+      <Header />
+      <Routes basename="/">
+        <Route path='/' element={<Home />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/details' element={<Details />} />
+        <Route path='/submit' element={<Submit />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
 
-        <Footer />
-      </div >
-    </AuthProvider>
+      <Footer />
+    </div >
   );
 }
 

@@ -34,7 +34,7 @@ export default function Register() {
                 <input type="password" name="password" placeholder="Парола" required />
                 <input type="password" name="rePass" placeholder="Повторете паролата" required />
 
-                <button>Качи проекта</button>
+                <button>Регистрация</button>
             </form>
         </div>
     )
