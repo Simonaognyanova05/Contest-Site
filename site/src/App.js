@@ -10,6 +10,7 @@ import Register from './components/Register';
 import { AuthProvider } from './contexts/AuthContext';
 import Login from './components/Login';
 import Logout from './components/Logout';
+import ForgottenPassword from './components/ForgottenPassword';
 
 function App() {
 
@@ -24,6 +25,8 @@ function App() {
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/logout' element={<Logout />} />
+        <Route path='/forgottenPassword' element={<ForgottenPassword />} />
+
 
       </Routes>
 
