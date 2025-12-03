@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { register } from '../services/register';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function Register() {
     const navigate = useNavigate();
+    const { onRegister } = useAuth();
 
     const registerHandler = async (e) => {
         e.preventDefault();
@@ -17,7 +19,8 @@ export default function Register() {
 
         let result = await register(email, password);
         if (result.status === 200) {
-            alert("Успешна регистрация!")
+            alert("Успешна регистрация!");
+            onRegister(result);
             navigate('/');
         } else {
             alert("Възникна грешка. Моля, опитайте по-късно!");

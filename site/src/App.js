@@ -7,22 +7,25 @@ import Projects from './components/Projects';
 import Details from './components/Details/Details';
 import Submit from './components/Submit';
 import Register from './components/Register';
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
 
   return (
-    <div className="App">
-      <Header />
-      <Routes basename="/">
-        <Route path='/' element={<Home />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/details' element={<Details />} />
-        <Route path='/submit' element={<Submit />} />
-        <Route path='/register' element={<Register />} />
-      </Routes>
+    <AuthProvider>
+      <div className="App">
+        <Header />
+        <Routes basename="/">
+          <Route path='/' element={<Home />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/details' element={<Details />} />
+          <Route path='/submit' element={<Submit />} />
+          <Route path='/register' element={<Register />} />
+        </Routes>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div >
+    </AuthProvider>
   );
 }
 
