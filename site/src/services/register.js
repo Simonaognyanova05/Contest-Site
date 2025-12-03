@@ -9,4 +9,4 @@ export async function register(email, password) {
         console.error("Error during registration:", error);
         return { status: 500, error: error.message };
     }
-} 
+}

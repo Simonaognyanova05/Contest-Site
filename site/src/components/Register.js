@@ -4,31 +4,29 @@ import { register } from '../services/register';
 export default function Register() {
     const navigate = useNavigate();
 
-    const loginHandler = async (e) => {
+    const registerHandler = async (e) => {
         e.preventDefault();
 
         const formData = new FormData(e.currentTarget);
-        const {email, password, rePass} = Object.fromEntries(formData);
+        const { email, password, rePass } = Object.fromEntries(formData);
 
-        if(password != rePass){
+        if (password != rePass) {
             alert("Паролите не съвпадат!");
-            return;
-        };
+            navigate('/registration');
+        }
 
         let result = await register(email, password);
-
-        if(result.status == 200){
-            alert("Успешно влизане!");
+        if (result.status === 200) {
+            alert("Успешна регистрация!")
             navigate('/');
-        }else{
-            alert("Възникна грешка при влизане!");
-            navigate('/login');
+        } else {
+            alert("Възникна грешка. Моля, опитайте по-късно!");
         }
     }
     return (
         <div class="container">
             <h1 style={{ marginBottom: "1rem" }}>Регистрация</h1>
-            <form onSubmit={loginHandler}>
+            <form onSubmit={registerHandler}>
                 <input type="text" name="email" placeholder="Имейл" required />
                 <input type="password" name="password" placeholder="Парола" required />
                 <input type="password" name="rePass" placeholder="Повторете паролата" required />

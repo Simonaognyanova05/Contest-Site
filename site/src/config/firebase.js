@@ -4,13 +4,12 @@ import { GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from 'firebase/firestore';;
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB2xGXsUyVNr3SJTz_nvAWCXQXwB4yUa18",
-    authDomain: "todotini-ho.firebaseapp.com",
-    projectId: "todotini-ho",
-    storageBucket: "todotini-ho.firebasestorage.app",
-    messagingSenderId: "113681991341",
-    appId: "1:113681991341:web:b9390cf737cdd1457b6824",
-    measurementId: "G-P1ZW13DJEJ"
+    apiKey: "AIzaSyB_u1ue_2gFoLJyPMs6nx4lIoToMSXlmKA",
+    authDomain: "contest-site-36329.firebaseapp.com",
+    projectId: "contest-site-36329",
+    storageBucket: "contest-site-36329.firebasestorage.app",
+    messagingSenderId: "466839858474",
+    appId: "1:466839858474:web:d2ad9ccdda4e918a30c253"
 };
 
 const app = initializeApp(firebaseConfig);
