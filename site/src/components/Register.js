@@ -18,7 +18,7 @@ export default function Register() {
         }
 
         let result = await register(email, password);
-        if (result.status === 200) {
+        if (result.status !== 500) {
             alert("Успешна регистрация!");
             onRegister(result);
             navigate('/');
